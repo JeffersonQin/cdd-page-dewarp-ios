@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E13D914E2FC16476447E4EF /* Pods_Page_Dewarpper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE2556620F093B5B17CED30 /* Pods_Page_Dewarpper.framework */; };
+		8472C030243AC62200E7F40F /* JQAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C020243AC62200E7F40F /* JQAnimationController.swift */; };
+		8472C031243AC62200E7F40F /* JQSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C021243AC62200E7F40F /* JQSearchBar.swift */; };
+		8472C032243AC62200E7F40F /* JQButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C022243AC62200E7F40F /* JQButton.swift */; };
+		8472C033243AC62200E7F40F /* JQOldSideView_ControllerSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C023243AC62200E7F40F /* JQOldSideView_ControllerSet.swift */; };
+		8472C034243AC62200E7F40F /* JQAlertViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C024243AC62200E7F40F /* JQAlertViewControl.swift */; };
+		8472C035243AC62200E7F40F /* UIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C026243AC62200E7F40F /* UIntExtension.swift */; };
+		8472C036243AC62200E7F40F /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C027243AC62200E7F40F /* IntExtension.swift */; };
+		8472C037243AC62200E7F40F /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C028243AC62200E7F40F /* CharacterExtension.swift */; };
+		8472C038243AC62200E7F40F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C029243AC62200E7F40F /* StringExtension.swift */; };
+		8472C039243AC62200E7F40F /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C02B243AC62200E7F40F /* UITextViewExtension.swift */; };
+		8472C03A243AC62200E7F40F /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C02C243AC62200E7F40F /* UIViewControllerExtension.swift */; };
+		8472C03B243AC62200E7F40F /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C02D243AC62200E7F40F /* UITableViewExtension.swift */; };
+		8472C03C243AC62200E7F40F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C02E243AC62200E7F40F /* UIViewExtension.swift */; };
+		8472C03D243AC62200E7F40F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C02F243AC62200E7F40F /* UIImageExtension.swift */; };
+		8472C03F243AD21E00E7F40F /* InspectorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C03E243AD21E00E7F40F /* InspectorImageView.swift */; };
+		8472C041243B1FDF00E7F40F /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C040243B1FDF00E7F40F /* HomeTableViewController.swift */; };
+		8472C043243C799300E7F40F /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C042243C799300E7F40F /* Build.swift */; };
+		8472C091243DCF5200E7F40F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472C090243DCF5200E7F40F /* QuartzCore.framework */; };
+		84AD3AB1243A167000456C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3AB0243A167000456C07 /* AppDelegate.swift */; };
+		84AD3AB9243A167000456C07 /* Page_Dewarper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3AB7243A167000456C07 /* Page_Dewarper.xcdatamodeld */; };
+		84AD3ABB243A167200456C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AD3ABA243A167200456C07 /* Assets.xcassets */; };
+		84AD3ABE243A167200456C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AD3ABC243A167200456C07 /* LaunchScreen.storyboard */; };
+		84AD3AC6243A172900456C07 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AD3AC5243A172900456C07 /* opencv2.framework */; };
+		84AD3ACC243A17A100456C07 /* PageImageNotatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3AC8243A17A100456C07 /* PageImageNotatingViewController.swift */; };
+		84AD3ACE243A17A100456C07 /* PageImageDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3ACA243A17A100456C07 /* PageImageDrawingViewController.swift */; };
+		84AD3ACF243A17A100456C07 /* PageImageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3ACB243A17A100456C07 /* PageImageProcessingViewController.swift */; };
+		84AD3AD4243A17D800456C07 /* PageImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3AD1243A17D800456C07 /* PageImageView.swift */; };
+		84AD3AD5243A17D800456C07 /* PageImageDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3AD2243A17D800456C07 /* PageImageDrawingView.swift */; };
+		84AD3AD6243A17D800456C07 /* PageImageNotatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3AD3243A17D800456C07 /* PageImageNotatingView.swift */; };
+		84AD3AD8243A17DE00456C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AD3AD7243A17DE00456C07 /* Main.storyboard */; };
+		84AD3ADD243A180700456C07 /* PreProcessForPageImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3ADB243A180700456C07 /* PreProcessForPageImage.mm */; };
+		84AD3ADE243A180700456C07 /* PageImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3ADC243A180700456C07 /* PageImageModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07FE15B77EE3B4DDCC23C05D /* Pods-Page Dewarpper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Page Dewarpper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Page Dewarpper/Pods-Page Dewarpper.release.xcconfig"; sourceTree = "<group>"; };
+		206F032F2615E9F30005E874 /* Page Dewarper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Page Dewarper.entitlements"; sourceTree = "<group>"; };
+		2CEBD0765AB3D089B5085F98 /* Pods-Page Dewarpper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Page Dewarpper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Page Dewarpper/Pods-Page Dewarpper.debug.xcconfig"; sourceTree = "<group>"; };
+		6AE2556620F093B5B17CED30 /* Pods_Page_Dewarpper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Page_Dewarpper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84428D15243E1F5200785FA5 /* DewarpPaper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DewarpPaper.h; sourceTree = "<group>"; };
+		8472C020243AC62200E7F40F /* JQAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQAnimationController.swift; sourceTree = "<group>"; };
+		8472C021243AC62200E7F40F /* JQSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQSearchBar.swift; sourceTree = "<group>"; };
+		8472C022243AC62200E7F40F /* JQButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQButton.swift; sourceTree = "<group>"; };
+		8472C023243AC62200E7F40F /* JQOldSideView_ControllerSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQOldSideView_ControllerSet.swift; sourceTree = "<group>"; };
+		8472C024243AC62200E7F40F /* JQAlertViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQAlertViewControl.swift; sourceTree = "<group>"; };
+		8472C026243AC62200E7F40F /* UIntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIntExtension.swift; sourceTree = "<group>"; };
+		8472C027243AC62200E7F40F /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		8472C028243AC62200E7F40F /* CharacterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterExtension.swift; sourceTree = "<group>"; };
+		8472C029243AC62200E7F40F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		8472C02B243AC62200E7F40F /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		8472C02C243AC62200E7F40F /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		8472C02D243AC62200E7F40F /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		8472C02E243AC62200E7F40F /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		8472C02F243AC62200E7F40F /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		8472C03E243AD21E00E7F40F /* InspectorImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorImageView.swift; sourceTree = "<group>"; };
+		8472C040243B1FDF00E7F40F /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		8472C042243C799300E7F40F /* Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		8472C090243DCF5200E7F40F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		84AD3AAD243A167000456C07 /* Page Dewarper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Page Dewarper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AD3AB0243A167000456C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84AD3AB8243A167000456C07 /* Page_Dewarpper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Page_Dewarpper.xcdatamodel; sourceTree = "<group>"; };
+		84AD3ABA243A167200456C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84AD3ABD243A167200456C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84AD3ABF243A167200456C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AD3AC5243A172900456C07 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		84AD3AC8243A17A100456C07 /* PageImageNotatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageNotatingViewController.swift; sourceTree = "<group>"; };
+		84AD3ACA243A17A100456C07 /* PageImageDrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageDrawingViewController.swift; sourceTree = "<group>"; };
+		84AD3ACB243A17A100456C07 /* PageImageProcessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageProcessingViewController.swift; sourceTree = "<group>"; };
+		84AD3AD1243A17D800456C07 /* PageImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageView.swift; sourceTree = "<group>"; };
+		84AD3AD2243A17D800456C07 /* PageImageDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageDrawingView.swift; sourceTree = "<group>"; };
+		84AD3AD3243A17D800456C07 /* PageImageNotatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageNotatingView.swift; sourceTree = "<group>"; };
+		84AD3AD7243A17DE00456C07 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		84AD3ADA243A180700456C07 /* Page Dewarper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Page Dewarper-Bridging-Header.h"; sourceTree = "<group>"; };
+		84AD3ADB243A180700456C07 /* PreProcessForPageImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PreProcessForPageImage.mm; sourceTree = "<group>"; };
+		84AD3ADC243A180700456C07 /* PageImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84AD3AAA243A167000456C07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8472C091243DCF5200E7F40F /* QuartzCore.framework in Frameworks */,
+				84AD3AC6243A172900456C07 /* opencv2.framework in Frameworks */,
+				5E13D914E2FC16476447E4EF /* Pods_Page_Dewarpper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E7DB3F58C716B5F803EEB87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8472C090243DCF5200E7F40F /* QuartzCore.framework */,
+				6AE2556620F093B5B17CED30 /* Pods_Page_Dewarpper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D6DF5F7B925534022563382 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CEBD0765AB3D089B5085F98 /* Pods-Page Dewarpper.debug.xcconfig */,
+				07FE15B77EE3B4DDCC23C05D /* Pods-Page Dewarpper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8472C01E243AC62200E7F40F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				8472C01F243AC62200E7F40F /* JQViews&Controllers */,
+				8472C025243AC62200E7F40F /* DataTypeExtension */,
+				8472C02A243AC62200E7F40F /* SystemUIExtensions */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		8472C01F243AC62200E7F40F /* JQViews&Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8472C020243AC62200E7F40F /* JQAnimationController.swift */,
+				8472C021243AC62200E7F40F /* JQSearchBar.swift */,
+				8472C022243AC62200E7F40F /* JQButton.swift */,
+				8472C023243AC62200E7F40F /* JQOldSideView_ControllerSet.swift */,
+				8472C024243AC62200E7F40F /* JQAlertViewControl.swift */,
+			);
+			path = "JQViews&Controllers";
+			sourceTree = "<group>";
+		};
+		8472C025243AC62200E7F40F /* DataTypeExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8472C026243AC62200E7F40F /* UIntExtension.swift */,
+				8472C027243AC62200E7F40F /* IntExtension.swift */,
+				8472C028243AC62200E7F40F /* CharacterExtension.swift */,
+				8472C029243AC62200E7F40F /* StringExtension.swift */,
+			);
+			path = DataTypeExtension;
+			sourceTree = "<group>";
+		};
+		8472C02A243AC62200E7F40F /* SystemUIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				8472C02B243AC62200E7F40F /* UITextViewExtension.swift */,
+				8472C02C243AC62200E7F40F /* UIViewControllerExtension.swift */,
+				8472C02D243AC62200E7F40F /* UITableViewExtension.swift */,
+				8472C02E243AC62200E7F40F /* UIViewExtension.swift */,
+				8472C02F243AC62200E7F40F /* UIImageExtension.swift */,
+			);
+			path = SystemUIExtensions;
+			sourceTree = "<group>";
+		};
+		84AD3AA4243A167000456C07 = {
+			isa = PBXGroup;
+			children = (
+				84AD3AC5243A172900456C07 /* opencv2.framework */,
+				84AD3AAF243A167000456C07 /* Page Dewarper */,
+				84AD3AAE243A167000456C07 /* Products */,
+				7D6DF5F7B925534022563382 /* Pods */,
+				0E7DB3F58C716B5F803EEB87 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84AD3AAE243A167000456C07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84AD3AAD243A167000456C07 /* Page Dewarper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84AD3AAF243A167000456C07 /* Page Dewarper */ = {
+			isa = PBXGroup;
+			children = (
+				206F032F2615E9F30005E874 /* Page Dewarper.entitlements */,
+				8472C01E243AC62200E7F40F /* Lib */,
+				84AD3AD9243A17FB00456C07 /* Model */,
+				84AD3AD0243A17CF00456C07 /* View */,
+				84AD3AC7243A179300456C07 /* Controller */,
+				84AD3AB0243A167000456C07 /* AppDelegate.swift */,
+				84AD3ABA243A167200456C07 /* Assets.xcassets */,
+				84AD3ABC243A167200456C07 /* LaunchScreen.storyboard */,
+				84AD3ABF243A167200456C07 /* Info.plist */,
+				84AD3AB7243A167000456C07 /* Page_Dewarper.xcdatamodeld */,
+			);
+			path = "Page Dewarper";
+			sourceTree = "<group>";
+		};
+		84AD3AC7243A179300456C07 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8472C040243B1FDF00E7F40F /* HomeTableViewController.swift */,
+				84AD3ACA243A17A100456C07 /* PageImageDrawingViewController.swift */,
+				84AD3AC8243A17A100456C07 /* PageImageNotatingViewController.swift */,
+				84AD3ACB243A17A100456C07 /* PageImageProcessingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84AD3AD0243A17CF00456C07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8472C03E243AD21E00E7F40F /* InspectorImageView.swift */,
+				84AD3AD7243A17DE00456C07 /* Main.storyboard */,
+				84AD3AD2243A17D800456C07 /* PageImageDrawingView.swift */,
+				84AD3AD3243A17D800456C07 /* PageImageNotatingView.swift */,
+				84AD3AD1243A17D800456C07 /* PageImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84AD3AD9243A17FB00456C07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84AD3ADC243A180700456C07 /* PageImageModel.swift */,
+				84AD3ADB243A180700456C07 /* PreProcessForPageImage.mm */,
+				84AD3ADA243A180700456C07 /* Page Dewarper-Bridging-Header.h */,
+				8472C042243C799300E7F40F /* Build.swift */,
+				84428D15243E1F5200785FA5 /* DewarpPaper.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84AD3AAC243A167000456C07 /* Page Dewarper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AD3AC2243A167200456C07 /* Build configuration list for PBXNativeTarget "Page Dewarper" */;
+			buildPhases = (
+				B5982631C9E2A2ED907808CF /* [CP] Check Pods Manifest.lock */,
+				84AD3AA9243A167000456C07 /* Sources */,
+				84AD3AAA243A167000456C07 /* Frameworks */,
+				84AD3AAB243A167000456C07 /* Resources */,
+				72C3FB19B1092DB322D1B281 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Page Dewarper";
+			productName = "Page Dewarpper";
+			productReference = 84AD3AAD243A167000456C07 /* Page Dewarper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84AD3AA5243A167000456C07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Jefferson Qin";
+				TargetAttributes = {
+					84AD3AAC243A167000456C07 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = 84AD3AA8243A167000456C07 /* Build configuration list for PBXProject "Page Dewarper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84AD3AA4243A167000456C07;
+			productRefGroup = 84AD3AAE243A167000456C07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84AD3AAC243A167000456C07 /* Page Dewarper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84AD3AAB243A167000456C07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AD3AD8243A17DE00456C07 /* Main.storyboard in Resources */,
+				84AD3ABE243A167200456C07 /* LaunchScreen.storyboard in Resources */,
+				84AD3ABB243A167200456C07 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72C3FB19B1092DB322D1B281 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Page Dewarpper/Pods-Page Dewarpper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Page Dewarpper/Pods-Page Dewarpper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5982631C9E2A2ED907808CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Page Dewarpper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84AD3AA9243A167000456C07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8472C039243AC62200E7F40F /* UITextViewExtension.swift in Sources */,
+				8472C033243AC62200E7F40F /* JQOldSideView_ControllerSet.swift in Sources */,
+				8472C03B243AC62200E7F40F /* UITableViewExtension.swift in Sources */,
+				8472C034243AC62200E7F40F /* JQAlertViewControl.swift in Sources */,
+				8472C030243AC62200E7F40F /* JQAnimationController.swift in Sources */,
+				8472C03C243AC62200E7F40F /* UIViewExtension.swift in Sources */,
+				84AD3AB1243A167000456C07 /* AppDelegate.swift in Sources */,
+				8472C036243AC62200E7F40F /* IntExtension.swift in Sources */,
+				84AD3AB9243A167000456C07 /* Page_Dewarper.xcdatamodeld in Sources */,
+				84AD3ACE243A17A100456C07 /* PageImageDrawingViewController.swift in Sources */,
+				84AD3AD5243A17D800456C07 /* PageImageDrawingView.swift in Sources */,
+				8472C032243AC62200E7F40F /* JQButton.swift in Sources */,
+				84AD3ACF243A17A100456C07 /* PageImageProcessingViewController.swift in Sources */,
+				8472C037243AC62200E7F40F /* CharacterExtension.swift in Sources */,
+				8472C043243C799300E7F40F /* Build.swift in Sources */,
+				8472C038243AC62200E7F40F /* StringExtension.swift in Sources */,
+				84AD3ADE243A180700456C07 /* PageImageModel.swift in Sources */,
+				84AD3ADD243A180700456C07 /* PreProcessForPageImage.mm in Sources */,
+				8472C03F243AD21E00E7F40F /* InspectorImageView.swift in Sources */,
+				8472C03D243AC62200E7F40F /* UIImageExtension.swift in Sources */,
+				8472C031243AC62200E7F40F /* JQSearchBar.swift in Sources */,
+				84AD3AD6243A17D800456C07 /* PageImageNotatingView.swift in Sources */,
+				84AD3ACC243A17A100456C07 /* PageImageNotatingViewController.swift in Sources */,
+				84AD3AD4243A17D800456C07 /* PageImageView.swift in Sources */,
+				8472C041243B1FDF00E7F40F /* HomeTableViewController.swift in Sources */,
+				8472C03A243AC62200E7F40F /* UIViewControllerExtension.swift in Sources */,
+				8472C035243AC62200E7F40F /* UIntExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84AD3ABC243A167200456C07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84AD3ABD243A167200456C07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84AD3AC0243A167200456C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84AD3AC1243A167200456C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84AD3AC3243A167200456C07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CEBD0765AB3D089B5085F98 /* Pods-Page Dewarpper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Page Dewarper/Page Dewarper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM7G949396;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Page Dewarper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gyrojeff.JeffersonQin.Page-Dewarpper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Page Dewarper/Model/Page Dewarper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84AD3AC4243A167200456C07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FE15B77EE3B4DDCC23C05D /* Pods-Page Dewarpper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Page Dewarper/Page Dewarper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM7G949396;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Page Dewarper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gyrojeff.JeffersonQin.Page-Dewarpper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Page Dewarper/Model/Page Dewarper-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84AD3AA8243A167000456C07 /* Build configuration list for PBXProject "Page Dewarper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AD3AC0243A167200456C07 /* Debug */,
+				84AD3AC1243A167200456C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84AD3AC2243A167200456C07 /* Build configuration list for PBXNativeTarget "Page Dewarper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AD3AC3243A167200456C07 /* Debug */,
+				84AD3AC4243A167200456C07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84AD3AB7243A167000456C07 /* Page_Dewarper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84AD3AB8243A167000456C07 /* Page_Dewarpper.xcdatamodel */,
+			);
+			currentVersion = 84AD3AB8243A167000456C07 /* Page_Dewarpper.xcdatamodel */;
+			path = Page_Dewarper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84AD3AA5243A167000456C07 /* Project object */;
+}

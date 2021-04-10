@@ -1,0 +1,20 @@
+PODS:
+  - Floaty (4.1.0)
+  - JGProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - Floaty
+  - JGProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Floaty
+    - JGProgressHUD
+
+SPEC CHECKSUMS:
+  Floaty: 1a4e213f3512cf3045ef9cb0c1ff456226d1f66a
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+
+PODFILE CHECKSUM: 7f6d12aae435f4e47c621b8242a68b9147f5150a
+
+COCOAPODS: 1.5.3
