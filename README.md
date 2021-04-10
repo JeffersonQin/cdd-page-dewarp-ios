@@ -19,13 +19,13 @@ If you want to clone the code and deploy the project on your own computer and ce
 The implementation of the model is initially coded in Jupyter Notebook, and the following table shows the migration progress.
 
 |  | Jupyter Notebook | iOS Version |
-| = | = | = |
-| Semi-automatic Model | ✅ | ✅ |
-| Dewarp-v1 | ✅ | ✅ |
-| Dewarp-v2 | ✅ | ✅ (⚠) |
-| Dewarp-v3 | ✅ |  |
+| - | - | - |
+| CDD: Semi-automatic Model | ✅ | ✅ |
+| CDD: Dewarp-v1 | ✅ | ✅ |
+| CDD: Dewarp-v2 | ✅ | ✅ (⚠) |
+| CDD: Dewarp-v3 | ✅ |  |
+| CDD: Page Optimization | ✅ |  |
 | RCF Network | ✅ |  |
-| Page Optimization | ✅ |  |
 
 ⚠: There is no free transformation methods in OpenCV library. The implementation here would either be too time-consuming or produce white lines. This would be fixed in further updates, through interpolation methods. 
 
