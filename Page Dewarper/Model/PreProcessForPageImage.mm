@@ -17,7 +17,6 @@ using namespace cv;
 
 namespace DeWarpperConstant {
     const int BINARYZATION_THRESHOLD = 30;
-    const int COUNT_OF_SEGMENTS = 300;
 };
 
 @implementation JQCV
@@ -149,7 +148,7 @@ namespace DeWarpperConstant {
     return MatToUIImage(dst);
 }
 
-+ (UIImage *) getPreProcessResult:(UIImage *)image :(UIImage *)mask :(CGFloat)middleSeperator :(CGPoint)p_UL :(CGPoint)p_UR :(CGPoint)p_DL :(CGPoint)p_DR :(JGProgressHUD *)progressHUD {
++ (UIImage *) getPreProcessResult:(UIImage *)image :(UIImage *)mask :(CGFloat)middleSeperator :(CGPoint)p_UL :(CGPoint)p_UR :(CGPoint)p_DL :(CGPoint)p_DR :(NSInteger)p_Width :(NSInteger)p_Height :(NSInteger)segment_count :(JGProgressHUD *)progressHUD {
     // - MARK: Sharpen + Gray + Gaussian + Sobel
     dispatch_async(dispatch_get_main_queue(), ^{ progressHUD.textLabel.text = @"Converting"; });
     Mat src = [JQCV getMat:image :false];
@@ -236,7 +235,7 @@ namespace DeWarpperConstant {
         upperApproximateCurveLengthSet.push_back(upperFittedCurveLength);
     }
     
-    double upperFittedCurveUnitLengthForEachSegment = upperFittedCurveLength / (double) DeWarpperConstant::COUNT_OF_SEGMENTS;
+    double upperFittedCurveUnitLengthForEachSegment = upperFittedCurveLength / (double) segment_count;
     
     vector<cv::Point2f> upperCroppingKeyPointsOnCurve;
     
@@ -283,7 +282,7 @@ namespace DeWarpperConstant {
         lowerApproximateCurveLengthSet.push_back(lowerFittedCurveLength);
     }
     
-    double lowerUnitLength = lowerFittedCurveLength / (double) DeWarpperConstant::COUNT_OF_SEGMENTS;
+    double lowerUnitLength = lowerFittedCurveLength / (double) segment_count;
     
     vector<cv::Point2f> lowerKeyBorderPoints;
     
@@ -300,9 +299,12 @@ namespace DeWarpperConstant {
     cout << "Upper Length: " << upperFittedCurveLength << endl << "Lower Length: " << lowerFittedCurveLength << endl;
     
     // 貌似很神奇的仿射变换（没有考虑纵向透视的情况）
+    
+    int u_Width = p_Width / segment_count;
+    
     Mat ret;
     
-    Mat affine_upper_mask(cv::Size(7, 2850), original.type(), cv::Scalar(255, 255, 255, 255));
+    Mat affine_upper_mask(cv::Size(u_Width, p_Height), original.type(), cv::Scalar(255, 255, 255, 255));
     Mat affine_lower_mask;
     
     
@@ -315,14 +317,14 @@ namespace DeWarpperConstant {
     src_corners_affine.push_back(upperCroppingKeyPointsOnCurve[1]);
     src_corners_affine.push_back(lowerKeyBorderPoints[0]);
     dst_corners_affine.push_back(cv::Point2f(0, 0));
-    dst_corners_affine.push_back(cv::Point2f(7, 0));
-    dst_corners_affine.push_back(cv::Point2f(0, 2850));
-    poly_corners_affine.push_back(cv::Point(7, 2850));
-    poly_corners_affine.push_back(cv::Point(7, 0));
-    poly_corners_affine.push_back(cv::Point(0, 2850));
+    dst_corners_affine.push_back(cv::Point2f(u_Width, 0));
+    dst_corners_affine.push_back(cv::Point2f(0, p_Height));
+    poly_corners_affine.push_back(cv::Point(u_Width, p_Height));
+    poly_corners_affine.push_back(cv::Point(u_Width, 0));
+    poly_corners_affine.push_back(cv::Point(0, p_Height));
     
     
-    cv::warpAffine(original, affine_upper, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(7, 2850), BORDER_REFLECT_101);
+    cv::warpAffine(original, affine_upper, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(u_Width, p_Height), BORDER_REFLECT_101);
     
     cv::fillConvexPoly(affine_upper_mask, poly_corners_affine, cv::Scalar(0, 0, 0, 0), 4);
     bitwise_not(affine_upper_mask, affine_lower_mask);
@@ -336,7 +338,7 @@ namespace DeWarpperConstant {
     });
     
     
-    for (int i = 2; i <= DeWarpperConstant::COUNT_OF_SEGMENTS; i ++) {
+    for (int i = 2; i <= segment_count; i ++) {
         std::vector<cv::Point2f> src_corners_affine, dst_corners_affine;
         std::vector<cv::Point> poly_corners_affine;
         cv::Mat affine;
@@ -344,15 +346,15 @@ namespace DeWarpperConstant {
         src_corners_affine.push_back(upperCroppingKeyPointsOnCurve[i]);
         src_corners_affine.push_back(lowerKeyBorderPoints[i - 1]);
         dst_corners_affine.push_back(cv::Point2f(0, 0));
-        dst_corners_affine.push_back(cv::Point2f(7, 0));
-        dst_corners_affine.push_back(cv::Point2f(0, 2850));
-        poly_corners_affine.push_back(cv::Point(7, 2850));
-        poly_corners_affine.push_back(cv::Point(7, 0));
-        poly_corners_affine.push_back(cv::Point(0, 2850));
-        cv::warpAffine(original, affine, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(7, 2850), BORDER_REFLECT_101);
+        dst_corners_affine.push_back(cv::Point2f(u_Width, 0));
+        dst_corners_affine.push_back(cv::Point2f(0, p_Height));
+        poly_corners_affine.push_back(cv::Point(u_Width, p_Height));
+        poly_corners_affine.push_back(cv::Point(u_Width, 0));
+        poly_corners_affine.push_back(cv::Point(0, p_Height));
+        cv::warpAffine(original, affine, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(u_Width, p_Height), BORDER_REFLECT_101);
         cv::bitwise_and(affine, affine_upper_mask, affine);
         cv::hconcat(affine_upper, affine, affine_upper);
-        dispatch_async(dispatch_get_main_queue(), ^{ progressHUD.progress = (double) i / (double) DeWarpperConstant::COUNT_OF_SEGMENTS; });
+        dispatch_async(dispatch_get_main_queue(), ^{ progressHUD.progress = (double) i / (double) segment_count; });
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{ progressHUD.textLabel.text = @"Affining Lower"; });
@@ -364,13 +366,13 @@ namespace DeWarpperConstant {
     src_corners_affine.push_back(upperCroppingKeyPointsOnCurve[1]);
     src_corners_affine.push_back(lowerKeyBorderPoints[0]);
     src_corners_affine.push_back(lowerKeyBorderPoints[1]);
-    dst_corners_affine.push_back(cv::Point2f(7, 0));
-    dst_corners_affine.push_back(cv::Point2f(0, 2850));
-    dst_corners_affine.push_back(cv::Point2f(7, 2850));
+    dst_corners_affine.push_back(cv::Point2f(u_Width, 0));
+    dst_corners_affine.push_back(cv::Point2f(0, p_Height));
+    dst_corners_affine.push_back(cv::Point2f(u_Width, p_Height));
     poly_corners_affine.push_back(cv::Point(0, 0));
-    poly_corners_affine.push_back(cv::Point(7, 0));
-    poly_corners_affine.push_back(cv::Point(0, 2850));
-    cv::warpAffine(original, affine_lower, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(7, 2850), BORDER_REFLECT_101);
+    poly_corners_affine.push_back(cv::Point(u_Width, 0));
+    poly_corners_affine.push_back(cv::Point(0, p_Height));
+    cv::warpAffine(original, affine_lower, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(u_Width, p_Height), BORDER_REFLECT_101);
     cv::bitwise_and(affine_lower_mask, affine_lower, affine_lower);
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -378,23 +380,23 @@ namespace DeWarpperConstant {
         progressHUD.progress = .0f;
     });
     
-    for (int i = 2; i <= DeWarpperConstant::COUNT_OF_SEGMENTS; i ++) {
+    for (int i = 2; i <= segment_count; i ++) {
         std::vector<cv::Point2f> src_corners_affine, dst_corners_affine;
         std::vector<cv::Point> poly_corners_affine;
         cv::Mat affine;
         src_corners_affine.push_back(upperCroppingKeyPointsOnCurve[i]);
         src_corners_affine.push_back(lowerKeyBorderPoints[i - 1]);
         src_corners_affine.push_back(lowerKeyBorderPoints[i]);
-        dst_corners_affine.push_back(cv::Point2f(7, 0));
-        dst_corners_affine.push_back(cv::Point2f(0, 2850));
-        dst_corners_affine.push_back(cv::Point2f(7, 2850));
+        dst_corners_affine.push_back(cv::Point2f(u_Width, 0));
+        dst_corners_affine.push_back(cv::Point2f(0, p_Height));
+        dst_corners_affine.push_back(cv::Point2f(u_Width, p_Height));
         poly_corners_affine.push_back(cv::Point(0, 0));
-        poly_corners_affine.push_back(cv::Point(7, 0));
-        poly_corners_affine.push_back(cv::Point(0, 2850));
-        cv::warpAffine(original, affine, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(7, 2850), BORDER_REFLECT_101);
+        poly_corners_affine.push_back(cv::Point(u_Width, 0));
+        poly_corners_affine.push_back(cv::Point(0, p_Height));
+        cv::warpAffine(original, affine, cv::getAffineTransform(src_corners_affine, dst_corners_affine), cv::Size(u_Width, p_Height), BORDER_REFLECT_101);
         cv::bitwise_and(affine_lower_mask, affine, affine);
         cv::hconcat(affine_lower, affine, affine_lower);
-        dispatch_async(dispatch_get_main_queue(), ^{ progressHUD.progress = (double) i / (double) DeWarpperConstant::COUNT_OF_SEGMENTS; });
+        dispatch_async(dispatch_get_main_queue(), ^{ progressHUD.progress = (double) i / (double) segment_count; });
     }
     
     cv::add(affine_lower, affine_upper, ret);
@@ -405,7 +407,7 @@ namespace DeWarpperConstant {
     
     // 考虑纵向透视的仿射变换
     
-    const double PAPER_WIDTH = 2100, PAPER_HEIGHT = 2850;
+//    const double PAPER_WIDTH = 2100, PAPER_HEIGHT = 2850;
 
 //
 //    Mat perspectiveRet(cv::Size(PAPER_WIDTH, PAPER_HEIGHT), original.type(), cv::Scalar(0, 0, 0, 0));

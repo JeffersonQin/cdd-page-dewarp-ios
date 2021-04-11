@@ -10,7 +10,7 @@
 
 + (UIImage *) getSharpenedImage:(UIImage *)image;
 + (UIImage *) getGrayImage:(UIImage *)image;
-+ (UIImage *) getPreProcessResult:(UIImage *)image :(UIImage *)mask :(CGFloat)upperLowerThreshold :(CGPoint)p_UL :(CGPoint)p_UR :(CGPoint)p_DL :(CGPoint)p_DR :(JGProgressHUD *)progressHUD;
++ (UIImage *) getPreProcessResult:(UIImage *)image :(UIImage *)mask :(CGFloat)middleSeperator :(CGPoint)p_UL :(CGPoint)p_UR :(CGPoint)p_DL :(CGPoint)p_DR :(NSInteger)p_Width :(NSInteger)p_Height :(NSInteger)segment_count :(JGProgressHUD *)progressHUD;
 + (UIImage *) getGaussianImage:(UIImage *)image;
 + (UIImage *) getSobelImage:(UIImage *)image;
 + (UIImage *) getSobelXImage:(UIImage *)image;

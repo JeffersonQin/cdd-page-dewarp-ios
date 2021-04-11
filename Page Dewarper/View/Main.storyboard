@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wYw-tr-5tm">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wYw-tr-5tm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +11,7 @@
         <!--Home-->
         <scene sceneID="YIq-Kp-BNW">
             <objects>
-                <tableViewController id="3F4-fM-vkY" customClass="HomeTableViewController" customModule="Page_Dewarpper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3F4-fM-vkY" customClass="HomeTableViewController" customModule="Page_Dewarper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jgf-IR-9XS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sJf-5f-n0f" id="eX8-h3-KHb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0a8-ZC-I2c">
@@ -36,19 +34,19 @@
                                             <rect key="frame" x="156" y="19" width="230" height="112"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Doc 20190314" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpY-h4-OU6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="32"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: 2019/03/14" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYT-IU-BYT">
-                                                    <rect key="frame" x="0.0" y="40" width="132.5" height="32"/>
+                                                    <rect key="frame" x="0.0" y="40" width="131" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Pages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwN-Lu-9Qm">
-                                                    <rect key="frame" x="0.0" y="80" width="69.5" height="32"/>
+                                                    <rect key="frame" x="0.0" y="80" width="69" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -102,7 +100,7 @@
         <!--Notating-->
         <scene sceneID="jdj-Ry-mt6">
             <objects>
-                <viewController id="5FM-tk-oHc" customClass="PageImageNotatingViewController" customModule="Page_Dewarpper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5FM-tk-oHc" customClass="PageImageNotatingViewController" customModule="Page_Dewarper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N9b-IR-cr6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,16 +136,17 @@
                                 </items>
                                 <color key="barTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBH-b3-GkU" customClass="PageImageView" customModule="Page_Dewarpper" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBH-b3-GkU" customClass="PageImageView" customModule="Page_Dewarper" customModuleProvider="target">
                                 <rect key="frame" x="16" y="104" width="382" height="693"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sYg-pT-wDH" customClass="PageImageNotatingView" customModule="Page_Dewarpper" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sYg-pT-wDH" customClass="PageImageNotatingView" customModule="Page_Dewarper" customModuleProvider="target">
                                 <rect key="frame" x="90" y="364" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Jg-vt-yxh"/>
                         <color key="backgroundColor" white="0.17863513127853881" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2br-Me-daL" firstAttribute="bottom" secondItem="7Jg-vt-yxh" secondAttribute="bottom" id="6Rc-YU-OfI"/>
@@ -158,7 +157,6 @@
                             <constraint firstItem="2br-Me-daL" firstAttribute="top" secondItem="rBH-b3-GkU" secondAttribute="bottom" constant="16" id="jwr-Wj-3ie"/>
                             <constraint firstItem="rBH-b3-GkU" firstAttribute="top" secondItem="7Jg-vt-yxh" secondAttribute="top" constant="16" id="sJU-Eq-HZf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7Jg-vt-yxh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Notating" id="JMt-2c-rXr"/>
                     <connections>
@@ -173,7 +171,7 @@
         <!--Drawing-->
         <scene sceneID="OUQ-cs-Lzt">
             <objects>
-                <viewController id="t8L-HP-Mq1" customClass="PageImageDrawingViewController" customModule="Page_Dewarpper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t8L-HP-Mq1" customClass="PageImageDrawingViewController" customModule="Page_Dewarper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ltc-o8-Nig">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +198,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iq7-la-Xx6"/>
                                     <barButtonItem style="plain" id="LFW-SZ-lfZ">
                                         <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.029999999999999999" minValue="0.0" maxValue="0.059999999999999998" id="g7n-On-J3d">
-                                            <rect key="frame" x="182" y="10" width="118" height="34"/>
+                                            <rect key="frame" x="180.5" y="10" width="118" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="sliderValueChanged:" destination="t8L-HP-Mq1" eventType="valueChanged" id="O4D-wP-zOk"/>
@@ -219,16 +217,17 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SE-xd-bRQ" customClass="PageImageView" customModule="Page_Dewarpper" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SE-xd-bRQ" customClass="PageImageView" customModule="Page_Dewarper" customModuleProvider="target">
                                 <rect key="frame" x="16" y="104" width="382" height="693"/>
                                 <color key="backgroundColor" white="0.1786351313" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S31-PY-A3Z" customClass="PageImageDrawingView" customModule="Page_Dewarpper" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S31-PY-A3Z" customClass="PageImageDrawingView" customModule="Page_Dewarper" customModuleProvider="target">
                                 <rect key="frame" x="96" y="384" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="aaN-r3-iGz"/>
                         <color key="backgroundColor" white="0.1786351313" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="60g-bs-ANx" firstAttribute="trailing" secondItem="aaN-r3-iGz" secondAttribute="trailing" id="AXe-EL-OIl"/>
@@ -239,7 +238,6 @@
                             <constraint firstItem="2SE-xd-bRQ" firstAttribute="top" secondItem="aaN-r3-iGz" secondAttribute="top" constant="16" id="hOR-bp-OVS"/>
                             <constraint firstItem="60g-bs-ANx" firstAttribute="top" secondItem="2SE-xd-bRQ" secondAttribute="bottom" constant="16" id="qbS-Qz-Uhh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="aaN-r3-iGz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Drawing" id="J68-Mb-Fdk"/>
                     <connections>
@@ -254,12 +252,12 @@
         <!--Processing-->
         <scene sceneID="mUF-Ke-vd9">
             <objects>
-                <viewController id="7Fp-Mj-Cka" customClass="PageImageProcessingViewController" customModule="Page_Dewarpper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Fp-Mj-Cka" customClass="PageImageProcessingViewController" customModule="Page_Dewarper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m8J-R7-Qbq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eiE-jC-8iL" customClass="PageImageView" customModule="Page_Dewarpper" customModuleProvider="target">
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eiE-jC-8iL" customClass="PageImageView" customModule="Page_Dewarper" customModuleProvider="target">
                                 <rect key="frame" x="16" y="104" width="382" height="742"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -267,6 +265,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="YYU-wy-Vx7"/>
                         <color key="backgroundColor" white="0.1786351313" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YYU-wy-Vx7" firstAttribute="bottom" secondItem="eiE-jC-8iL" secondAttribute="bottom" constant="16" id="Pma-c2-Y7G"/>
@@ -274,9 +273,14 @@
                             <constraint firstItem="YYU-wy-Vx7" firstAttribute="trailing" secondItem="eiE-jC-8iL" secondAttribute="trailing" constant="16" id="chc-Fg-TVH"/>
                             <constraint firstItem="eiE-jC-8iL" firstAttribute="leading" secondItem="YYU-wy-Vx7" secondAttribute="leading" constant="16" id="jEq-Fr-mwU"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="YYU-wy-Vx7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Processing" id="hUY-YY-FZX"/>
+                    <navigationItem key="navigationItem" title="Processing" id="hUY-YY-FZX">
+                        <barButtonItem key="rightBarButtonItem" title="Size Adjustion" id="eEL-ee-XBt">
+                            <connections>
+                                <action selector="adjustButtonTouched:" destination="7Fp-Mj-Cka" id="BT0-YX-EvK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="pageImageView" destination="eiE-jC-8iL" id="eKi-oY-Oa3"/>
                     </connections>

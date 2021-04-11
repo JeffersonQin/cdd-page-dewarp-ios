@@ -18,21 +18,64 @@ class PageImageProcessingViewController: UIViewController {
     
     let progressHUD = JGProgressHUD.init(style: .dark)
     
+    private var width: NSInteger = 0
+    private var height: NSInteger = 0
+    private var segmentCount: NSInteger = 0
+    
+    private func process() {
+        let alertController = UIAlertController.init(title: "Adjust Size of Output", message: "Type in Width & Height", preferredStyle: .alert)
+        alertController.addTextField { (textField: UITextField) in
+            textField.placeholder = "Width"
+            textField.text = "2100"
+        }
+        alertController.addTextField { (textField: UITextField) in
+            textField.placeholder = "Height"
+            textField.text = "2850"
+        }
+        alertController.addTextField { (textField: UITextField) in
+            textField.placeholder = "Segment Count"
+            textField.text = "300"
+        }
+        let cancelAction = UIAlertAction.init(title: "Cancel", style: .destructive, handler: nil)
+        let okAction = UIAlertAction.init(title: "OK", style: .default) { (_) in
+            guard let width: NSInteger = NSInteger((alertController.textFields![0] as UITextField).text!),
+                  let height: NSInteger = NSInteger((alertController.textFields![1] as UITextField).text!),
+                  let segmentCount: NSInteger = NSInteger((alertController.textFields![2] as UITextField).text!)
+            else {
+                let errorAlert = UIAlertController.init()
+                errorAlert.addAction(UIAlertAction.init(title: "Wrong Format", style: .default, handler: nil))
+                self.present(errorAlert, animated: true, completion: nil)
+                return
+            }
+            self.width = width
+            self.height = height
+            self.segmentCount = segmentCount
+            self.progressHUD.show(in: self.view, animated: true)
+            Thread.init {
+                let showImage = JQCV.getPreProcessResult(self.pageImageModel?.originalImage, self.pageImageModel?.drawingNotationImage, self.pageImageModel!.upperLowerSeperateThreshold, (self.pageImageModel?.notationPoints!.p_UL)!, (self.pageImageModel?.notationPoints!.p_UR)!, (self.pageImageModel?.notationPoints!.p_DL)!, (self.pageImageModel?.notationPoints!.p_DR)!, self.width, self.height, self.segmentCount, self.progressHUD)
+                DispatchQueue.main.async {
+                    self.pageImageView.showingImage = showImage!
+                    UIImageWriteToSavedPhotosAlbum(self.pageImageView.showingImage, self, #selector(self.saveImage(image:didFinishSavingWithError:contextInfo:)), nil)
+                    self.progressHUD.dismiss(animated: true)
+                }
+            }.start()
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func adjustButtonTouched(_ sender: UIBarButtonItem) {
+        self.process()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pageImageView.showingImage = pageImageModel!.pointsNotationImage!
-        progressHUD.show(in: self.view, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        Thread.init {
-            let showImage = JQCV.getPreProcessResult(self.pageImageModel?.originalImage, self.pageImageModel?.drawingNotationImage, self.pageImageModel!.upperLowerSeperateThreshold, (self.pageImageModel?.notationPoints!.p_UL)!, (self.pageImageModel?.notationPoints!.p_UR)!, (self.pageImageModel?.notationPoints!.p_DL)!, (self.pageImageModel?.notationPoints!.p_DR)!, self.progressHUD)
-            DispatchQueue.main.async {
-                self.pageImageView.showingImage = showImage!
-                UIImageWriteToSavedPhotosAlbum(self.pageImageView.showingImage, self, #selector(self.saveImage(image:didFinishSavingWithError:contextInfo:)), nil)
-                self.progressHUD.dismiss(animated: true)
-            }
-        }.start()
+        self.process()
     }
     
     
