@@ -1,3 +1,5 @@
+!!! THIS PROJECT IS STILL WORKING IN PROGRESS !!!
+
 # Introduction
 
 This project is an implementation of CDD Model on iOS Platform. We used OpenCV library to handle the image processing work. Since OpenCV is mostly a C++ library, the part of image processing in this project is written in Objective-C++. The interfaces are implemented in Swift, and a bridging file was created to compile the project.
@@ -36,7 +38,7 @@ The implementation of the model is initially coded in Jupyter Notebook, and the 
 - [Floaty](https://github.com/kciter/Floaty)
 - [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD)
 
-# Contact
+# Contact Me
 
 - Email: 1247006353@qq.com
 - QQ, Wechat: 1247006353
