@@ -21,6 +21,7 @@ The implementation of the model is initially coded in Jupyter Notebook, and the 
 |  | Jupyter Notebook | iOS Version |
 | - | - | - |
 | CDD: Semi-automatic Model | ✅ | ✅ |
+| CDD: Segmentation | ✅ | ✅ |
 | CDD: Dewarp-v1 | ✅ | ✅ |
 | CDD: Dewarp-v2 | ✅ | ✅ (⚠) |
 | CDD: Dewarp-v3 | ✅ |  |
