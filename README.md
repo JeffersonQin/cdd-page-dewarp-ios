@@ -10,6 +10,7 @@ If you want to clone the code and deploy the project on your own computer and ce
 
 1. The OpenCV library file is not included in the repository due to its large size, and it was added into `.gitignore`. In order to compile the project, you have to [download](https://opencv.org/releases/) the iOS distribution of OpenCV, and add it to the project (or you can just simply place it in the root directory of the project, and Xcode will recognize that).
 2. If problems are encountered when compiling the project, check the directory of bridging file in the build settings of the project.
+3. This project uses CocoaPods. If you don't know what it is, [click here](https://github.com/CocoaPods/CocoaPods)
 
 # Known Isses
 
