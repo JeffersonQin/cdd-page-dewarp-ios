@@ -1,3 +1,4 @@
 *.framework
 Pods/
 Build/
+.DS_Store
