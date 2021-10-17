@@ -1,6 +1,6 @@
 !!! THIS PROJECT IS STILL WORKING IN PROGRESS !!!
 
-[Paper is here](./paper.pdf)
+[Paper is here](./paper-compressed.pdf)
 
 # Introduction
 
