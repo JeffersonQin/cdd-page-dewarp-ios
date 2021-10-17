@@ -1,5 +1,7 @@
 !!! THIS PROJECT IS STILL WORKING IN PROGRESS !!!
 
+[Paper is here](./paper.pdf)
+
 # Introduction
 
 This project is an implementation of CDD Model on iOS Platform. We used OpenCV library to handle the image processing work. Since OpenCV is mostly a C++ library, the part of image processing in this project is written in Objective-C++. The interfaces are implemented in Swift, and a bridging file was created to compile the project.
